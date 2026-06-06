@@ -864,9 +864,7 @@
     <!-- HERO -->
     <section class="hero">
       <div class="hero-content">
-        <div class="hero-tag">
-          // Software Engineer
-        </div>
+        <div class="hero-tag">// Software Engineer</div>
         <h1>
           <span class="name">IRSYAD IFFWAT</span>
           <span class="role"
@@ -876,7 +874,8 @@
         <p class="hero-desc">
           Building practical systems across <span>data analytics</span>,
           <span>machine learning</span>, and
-          <span>full-stack development</span>, with a focus on real operational impact.
+          <span>full-stack development</span>, with a focus on real operational
+          impact.
         </p>
         <div class="hero-cta">
           <a href="#projects" class="btn-primary">View Projects &rarr;</a>
@@ -912,7 +911,6 @@
         <div class="projects-grid">
           <!-- FEATURED -->
           <div class="project-card featured reveal">
-            
             <div>
               <span class="project-type">Data Analyst Internship</span>
               <h3 class="project-name">War Room SPM Dashboard 2023</h3>
@@ -1346,66 +1344,85 @@
           <div class="reveal">
             <p class="contact-blurb">
               I'm open to data analyst, full-stack developer, and software
-              engineering opportunities where
-              practical systems, clean dashboards, and reliable workflows
-              matter.
+              engineering opportunities where practical systems, clean
+              dashboards, and reliable workflows matter.
             </p>
             <div class="contact-links">
-              <a href="#contact" class="contact-link">
+              <a href="mailto:irsyad.iffwat@gmail.com" class="contact-link">
                 <div class="contact-link-icon">@</div>
-                <span>Add your email address</span>
+                <span>irsyad.iffwat@gmail.com</span>
               </a>
-              <a href="#contact" class="contact-link">
+              <a
+                href="https://github.com/Iffwat"
+                target="_blank"
+                class="contact-link"
+              >
                 <div class="contact-link-icon">GH</div>
-                <span>Add your GitHub profile</span>
+                <span>Iffwat</span>
               </a>
-              <a href="#contact" class="contact-link">
+              <a
+                href="https://www.linkedin.com/in/irsyadiffwat-31b05630b"
+                target="_blank"
+                class="contact-link"
+              >
                 <div class="contact-link-icon">in</div>
-                <span>Add your LinkedIn profile</span>
+                <span>MUHAMMAD IRSYAD IFFWAT AZHAR</span>
               </a>
-              <a href="Portfolio.pdf" class="contact-link" download>
-                <div class="contact-link-icon">DL</div>
-                <span>Download Portfolio (PDF)</span>
+              <a href="Resume.pdf" class="contact-link" download>
+                <div class="contact-link-icon">RS</div>
+                <span>Download Resume (PDF)</span>
               </a>
             </div>
           </div>
 
-          <div class="contact-form reveal">
+          <form
+            action="https://formspree.io/f/xdavajrd"
+            method="POST"
+            class="contact-form reveal"
+          >
             <div class="form-group">
               <label class="form-label">Name</label>
-              <input class="form-input" type="text" placeholder="Jane Smith" />
+              <input
+                class="form-input"
+                type="text"
+                name="name"
+                placeholder="Jane Smith"
+                required
+              />
             </div>
             <div class="form-group">
               <label class="form-label">Email</label>
               <input
                 class="form-input"
                 type="email"
+                name="email"
                 placeholder="jane@company.com"
+                required
               />
             </div>
             <div class="form-group">
               <label class="form-label">Message</label>
               <textarea
                 class="form-textarea"
+                name="message"
                 placeholder="I'd love to chat about..."
+                required
               ></textarea>
             </div>
             <button
               class="btn-primary"
+              type="submit"
               style="align-self: flex-start; cursor: pointer; border: none"
             >
               Send Message &rarr;
             </button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
 
     <footer>
-      <span class="footer-copy"
-        >&copy; 2026 Irsyad Iffwat. Built with focus and practical
-        engineering.</span
-      >
+      <span class="footer-copy">&copy; 2026 Irsyad Iffwat.</span>
       <span
         class="footer-copy"
         style="font-size: 0.65rem; letter-spacing: 0.08em"
@@ -1422,11 +1439,7 @@
       });
 
       // Typing animation
-      const roles = [
-        "Data Analyst",
-        "Full-Stack Developer",
-        "ML/NLP Builder",
-      ];
+      const roles = ["Data Analyst", "Full-Stack Developer", "ML/NLP Builder"];
       let roleIdx = 0,
         charIdx = 0,
         deleting = false;
