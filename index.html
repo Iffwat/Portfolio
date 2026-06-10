@@ -494,6 +494,34 @@
         gap: 0.5rem;
       }
 
+      .project-actions {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .project-detail-link {
+        position: relative;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        color: var(--accent);
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0, 245, 196, 0.35);
+        padding-bottom: 0.15rem;
+      }
+
+      .project-detail-link:hover {
+        border-color: var(--accent);
+      }
+
       .tag {
         font-family: var(--mono);
         font-size: 0.65rem;
@@ -792,27 +820,7 @@
         transition: transform 0.1s;
       }
 
-      /* === TYPING === */
-      .typed-wrap {
-        display: inline-block;
-      }
-
-      .cursor-blink {
-        display: inline-block;
-        width: 3px;
-        height: 1em;
-        background: var(--accent);
-        vertical-align: text-bottom;
-        animation: blink 1s step-end infinite;
-        margin-left: 2px;
-      }
-
-      @keyframes blink {
-        50% {
-          opacity: 0;
-        }
-      }
-
+      
       @media (max-width: 900px) {
         nav {
           padding: 1rem 1.5rem;
@@ -867,9 +875,9 @@
         <div class="hero-tag">// Software Engineer</div>
         <h1>
           <span class="name">IRSYAD IFFWAT</span>
-          <span class="role"
-            ><span id="typed-role"></span><span class="cursor-blink"></span
-          ></span>
+          <span class="role">Software Developer</span>
+        </h1>
+
         </h1>
         <p class="hero-desc">
           Building practical systems across <span>data analytics</span>,
@@ -910,26 +918,7 @@
 
         <div class="projects-grid">
           <!-- FEATURED -->
-          <div class="project-card featured reveal">
-            <div>
-              <span class="project-type">Data Analyst Internship</span>
-              <h3 class="project-name">War Room SPM Dashboard 2023</h3>
-              <p class="project-desc">
-                Designed for Jabatan Pendidikan Negeri Sembilan to help
-                education officers analyze historical SPM results from
-                2017-2022, compare school assessments, and identify strategic
-                performance targets for upcoming exams.
-              </p>
-              <div class="project-tags">
-                <span class="tag">Google Sheets</span>
-                <span class="tag">Looker Studio</span>
-                <span class="tag">AppSheet</span>
-                <span class="tag">Data Visualization</span>
-                <span class="tag">Access Control</span>
-                <span class="tag">Internship</span>
-              </div>
-            </div>
-          </div>
+       
 
           <!-- Card 2 -->
           <div class="project-card reveal">
@@ -1004,107 +993,67 @@
               <span class="tag">HuggingFace</span>
               <span class="tag">Chart.js</span>
             </div>
+            <div class="project-actions">
+              <a
+                class="project-detail-link"
+                href="project-detail.html?project=investment"
+                >View details &rarr;</a
+              >
+            </div>
           </div>
 
           <!-- Card 3 -->
           <div class="project-card reveal">
-            <div
-              class="project-visual"
-              style="height: 160px; margin-bottom: 1.5rem"
-            >
-              <svg viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
-                <rect width="300" height="160" fill="#111a2e" />
-                <rect
-                  x="20"
-                  y="22"
-                  width="260"
-                  height="22"
-                  rx="3"
-                  fill="rgba(0,245,196,0.08)"
-                  stroke="rgba(0,245,196,0.2)"
-                  stroke-width="1"
+            <div class="project-visual">
+              <div class="slider-wrapper">
+                <img
+                  src="https://i.postimg.cc/pXcT5g0K/Landing.jpg"
+                  alt="Project Image 1"
+                  class="slide"
                 />
-                <rect
-                  x="32"
-                  y="30"
-                  width="80"
-                  height="6"
-                  rx="2"
-                  fill="rgba(0,245,196,0.45)"
+                <img
+                  src="https://i.postimg.cc/bNVJSK6k/Menu.jpg"
+                  alt="Project Image 2"
+                  class="slide"
                 />
-                <rect
-                  x="20"
-                  y="58"
-                  width="72"
-                  height="76"
-                  rx="3"
-                  fill="rgba(123,97,255,0.14)"
+                <img
+                  src="https://i.postimg.cc/28Sy6zx4/Attendance-record.jpg"
+                  alt="Project Image 3"
+                  class="slide"
                 />
-                <rect
-                  x="112"
-                  y="58"
-                  width="72"
-                  height="76"
-                  rx="3"
-                  fill="rgba(0,245,196,0.12)"
+                <img
+                  src="https://i.postimg.cc/kXgG4ny8/Data-Center.jpg"
+                  alt="Project Image 4"
+                  class="slide"
                 />
-                <rect
-                  x="204"
-                  y="58"
-                  width="76"
-                  height="76"
-                  rx="3"
-                  fill="rgba(255,107,107,0.12)"
+                <img
+                  src="https://i.postimg.cc/FsCRk2Pc/Login.jpg"
+                  alt="Project Image 5"
+                  class="slide"
                 />
-                <rect
-                  x="34"
-                  y="76"
-                  width="44"
-                  height="8"
-                  rx="2"
-                  fill="rgba(255,255,255,0.16)"
-                />
-                <rect
-                  x="126"
-                  y="76"
-                  width="44"
-                  height="8"
-                  rx="2"
-                  fill="rgba(255,255,255,0.16)"
-                />
-                <rect
-                  x="218"
-                  y="76"
-                  width="48"
-                  height="8"
-                  rx="2"
-                  fill="rgba(255,255,255,0.16)"
-                />
-                <rect
-                  x="34"
-                  y="98"
-                  width="32"
-                  height="20"
-                  rx="2"
-                  fill="rgba(123,97,255,0.35)"
-                />
-                <rect
-                  x="126"
-                  y="92"
-                  width="32"
-                  height="26"
-                  rx="2"
-                  fill="rgba(0,245,196,0.32)"
-                />
-                <rect
-                  x="218"
-                  y="86"
-                  width="32"
-                  height="32"
-                  rx="2"
-                  fill="rgba(255,107,107,0.3)"
-                />
-              </svg>
+              </div>
+              <button
+                class="slider-btn prev"
+                onclick="moveSlide(this, -1, event)"
+              >
+                &#10094;
+              </button>
+              <button
+                class="slider-btn next"
+                onclick="moveSlide(this, 1, event)"
+              >
+                &#10095;
+              </button>
+              <div class="slider-dots">
+                <span
+                  class="dot active"
+                  onclick="currentSlide(this, 0, event)"
+                ></span>
+                <span class="dot" onclick="currentSlide(this, 1, event)"></span>
+                <span class="dot" onclick="currentSlide(this, 2, event)"></span>
+                <span class="dot" onclick="currentSlide(this, 3, event)"></span>
+                <span class="dot" onclick="currentSlide(this, 4, event)"></span>
+              </div>
             </div>
             <span class="project-type">Full-Stack Development</span>
             <h3 class="project-name">Elvira Admin Portal</h3>
@@ -1122,7 +1071,47 @@
               <span class="tag">Alpine.js</span>
               <span class="tag">Vite</span>
             </div>
+            <div class="project-actions">
+              <a
+                class="project-detail-link"
+                href="project-detail.html?project=elvira"
+                >View details &rarr;</a
+              >
+            </div>
           </div>
+
+          <!-- Card 4 -->
+          
+            <div>
+               <div class="project-card reveal">
+                
+              <span class="project-type">Data Analyst Internship</span>
+              <h3 class="project-name">War Room SPM Dashboard 2023</h3>
+              <p class="project-desc">
+                Designed for Jabatan Pendidikan Negeri Sembilan to help
+                education officers analyze historical SPM results from
+                2017-2022, compare school assessments, and identify strategic
+                performance targets for upcoming exams.
+              </p>
+              <div class="project-tags">
+                <span class="tag">Google Sheets</span>
+                <span class="tag">Looker Studio</span>
+                <span class="tag">AppSheet</span>
+                <span class="tag">Data Visualization</span>
+                <span class="tag">Access Control</span>
+                <span class="tag">Internship</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="project-detail-link"
+                  href="project-detail.html?project=war-room"
+                  >View details &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+
+          
         </div>
       </div>
     </section>
