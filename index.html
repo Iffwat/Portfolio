@@ -592,8 +592,16 @@
           grid-template-columns: 1fr;
           padding: 8rem 1.5rem 4rem;
           text-align: center;
+          gap: 3rem;
         }
-        .hero-portrait { display: none; }
+        .hero-content { grid-row: 2; }
+        .hero-portrait { 
+          display: block;
+          width: 250px;
+          height: 250px;
+          margin: 0 auto;
+          grid-row: 1; 
+        }
         .hero-cta { justify-content: center; }
         .hero-stats { justify-content: center; }
         .scroll-indicator { display: none; }
