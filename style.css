@@ -392,13 +392,16 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 900px) {
   .section {
-    padding: 5rem 1.5rem;
+    padding: 5rem 1.25rem;
   }
   .section-title {
     font-size: 2rem;
   }
   .tech-logo-grid {
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  }
+  .project-card, .contact-form, .timeline-content {
+    padding: 1.5rem !important;
   }
   /* Disable custom cursor on mobile */
   .cursor-dot, .cursor-outline {
