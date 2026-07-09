@@ -4,257 +4,141 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project Detail - Irsyad Iffwat</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="style.css" />
     <style>
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      :root {
-        --bg: #060a12;
-        --bg2: #0d1421;
-        --bg3: #111a2e;
-        --accent: #00f5c4;
-        --accent2: #7b61ff;
-        --accent3: #ff6b6b;
-        --text: #e8eaf6;
-        --muted: #8991a3;
-        --border: rgba(255, 255, 255, 0.08);
-        --mono: "Space Mono", monospace;
-        --sans: "Syne", sans-serif;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        min-height: 100vh;
-        background: var(--bg);
-        color: var(--text);
-        font-family: var(--sans);
-        font-size: 16px;
-        line-height: 1.7;
-      }
-
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background-image:
-          linear-gradient(rgba(0, 245, 196, 0.03) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(0, 245, 196, 0.03) 1px, transparent 1px);
-        background-size: 60px 60px;
-        pointer-events: none;
-        z-index: 0;
-      }
-
+      /* Component specific layout styles for project-detail.html */
       nav {
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 10;
+        top: 1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1.25rem 4rem;
-        background: rgba(6, 10, 18, 0.85);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid var(--border);
+        padding: 1rem 2.5rem;
+        width: 90%;
+        max-width: 1200px;
+        border-radius: 100px;
       }
 
       .nav-logo,
       .nav-back {
-        font-family: var(--mono);
-        color: var(--accent);
+        font-family: var(--font-mono);
         text-decoration: none;
+        transition: color 0.2s;
       }
 
       .nav-logo {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--text-main);
+      }
+      
+      .nav-logo span {
+        color: var(--accent-cyan);
       }
 
       .nav-back {
         font-size: 0.75rem;
         letter-spacing: 0.08em;
         text-transform: uppercase;
+        color: var(--text-muted);
+      }
+      
+      .nav-back:hover {
+        color: var(--accent-cyan);
       }
 
-      main {
+      .detail-hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        padding: 10rem 4rem 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
         position: relative;
         z-index: 1;
       }
 
-      .detail-hero {
-        min-height: 84vh;
-        display: flex;
-        align-items: center;
-        padding: 8rem 4rem 4rem;
-      }
-
       .eyebrow {
         display: inline-block;
-        margin-bottom: 1.4rem;
-        color: var(--accent);
-        border: 1px solid rgba(0, 245, 196, 0.3);
-        border-radius: 2px;
-        padding: 0.35rem 0.85rem;
-        font-family: var(--mono);
-        font-size: 0.68rem;
-        letter-spacing: 0.14em;
+        margin-bottom: 1.5rem;
+        color: var(--accent-cyan);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
         text-transform: uppercase;
       }
 
-      h1 {
-        max-width: 780px;
-        margin-bottom: 1.3rem;
-        font-size: clamp(2.6rem, 5vw, 5.4rem);
-        font-weight: 800;
-        line-height: 0.98;
-        letter-spacing: -0.04em;
+      .detail-hero h1 {
+        max-width: 800px;
+        margin-bottom: 1.5rem;
+        font-size: clamp(3rem, 6vw, 5rem);
+        line-height: 1.05;
       }
 
       .lead {
-        max-width: 640px;
-        color: var(--muted);
-        font-size: 1.06rem;
+        max-width: 680px;
+        color: var(--text-muted);
+        font-size: 1.15rem;
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.8rem;
-        margin-top: 2rem;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        border-radius: 2px;
-        padding: 0.85rem 1.3rem;
-        font-family: var(--mono);
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-
-      .btn-primary {
-        background: var(--accent);
-        color: var(--bg);
-      }
-
-      .btn-outline {
-        color: var(--text);
-        border: 1px solid var(--border);
+        gap: 1rem;
+        margin-top: 2.5rem;
       }
 
       .visual-placeholder {
         display: grid;
         place-items: center;
-        min-height: 320px;
-        background:
-          linear-gradient(135deg, rgba(0, 245, 196, 0.16), transparent 42%),
-          linear-gradient(315deg, rgba(123, 97, 255, 0.2), transparent 52%),
-          var(--bg3);
-        color: var(--text);
-        font-family: var(--mono);
+        min-height: 250px;
+        background: rgba(0,0,0,0.2);
+        color: var(--text-muted);
+        font-family: var(--font-mono);
         font-size: 0.76rem;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         text-align: center;
         text-transform: uppercase;
-      }
-
-      .section {
-        padding: 4rem 4rem;
-      }
-
-      .section-inner {
-        max-width: 1180px;
-        margin: 0 auto;
-      }
-
-      .section-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 2rem;
-      }
-
-      .section-num {
-        color: var(--accent);
-        font-family: var(--mono);
-        font-size: 0.78rem;
-        margin-right: 0.8rem;
-      }
-
-      .section-title {
-        font-size: 1.4rem;
-        letter-spacing: -0.02em;
-      }
-
-      .section-line {
-        flex: 1;
-        height: 1px;
-        margin-left: 1rem;
-        background: var(--border);
+        border-radius: 8px;
+        border: 1px dashed var(--glass-border);
       }
 
       .overview-grid {
         display: grid;
-        grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-        gap: 1.5rem;
-      }
-
-      .panel,
-      .metric,
-      .gallery-item {
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        background: var(--bg2);
+        grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
+        gap: 2rem;
       }
 
       .panel {
-        padding: 1.8rem;
+        padding: 2.5rem;
       }
 
       .panel h3 {
-        margin-bottom: 0.8rem;
-        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
       }
 
       .panel p,
       .panel li {
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      .panel ul {
-        display: grid;
-        gap: 0.7rem;
-        padding-left: 1.2rem;
+        color: var(--text-muted);
+        font-size: 1rem;
       }
 
       .facts {
         display: grid;
-        gap: 0.8rem;
+        gap: 1.25rem;
       }
 
       .fact {
         display: flex;
         justify-content: space-between;
-        gap: 1rem;
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 0.8rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--glass-border);
+        padding-bottom: 1.25rem;
       }
 
       .fact:last-child {
@@ -263,130 +147,119 @@
       }
 
       .fact span:first-child {
-        color: var(--muted);
-        font-family: var(--mono);
-        font-size: 0.68rem;
-        letter-spacing: 0.08em;
+        color: var(--accent-cyan);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
       }
 
       .fact span:last-child {
         text-align: right;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        font-weight: 500;
       }
 
       .metrics {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: 1.5rem;
       }
 
       .metric {
-        padding: 1.35rem;
+        padding: 2rem;
+        text-align: center;
       }
 
       .metric strong {
         display: block;
-        color: var(--accent);
-        font-family: var(--mono);
-        font-size: 1.4rem;
+        font-family: var(--font-mono);
+        font-size: 2.5rem;
         line-height: 1.2;
+        margin-bottom: 0.5rem;
       }
 
       .metric span {
-        color: var(--muted);
-        font-size: 0.82rem;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
       }
 
       .gallery {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: 1.5rem;
       }
 
       .gallery-item {
         overflow: hidden;
+        border-radius: 8px;
+        background: rgba(0,0,0,0.2);
+        border: 1px solid var(--glass-border);
+        padding: 0.5rem;
       }
 
-      .gallery-item img,
-      .gallery-item .visual-placeholder {
+      .gallery-item img {
         width: 100%;
         aspect-ratio: 16 / 10;
         object-fit: cover;
+        border-radius: 4px;
+        transition: transform 0.5s;
+      }
+      
+      .gallery-item:hover img {
+        transform: scale(1.05);
       }
 
       .gallery-caption {
-        padding: 0.75rem 0.9rem;
-        color: var(--muted);
-        font-family: var(--mono);
-        font-size: 0.68rem;
-        letter-spacing: 0.04em;
+        padding: 1rem 0.5rem 0.5rem;
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+        font-size: 0.75rem;
+        letter-spacing: 0.02em;
+        text-align: center;
       }
 
       .tags {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem;
-      }
-
-      .tag {
-        border: 1px solid var(--border);
-        border-radius: 2px;
-        background: rgba(255, 255, 255, 0.04);
-        color: var(--muted);
-        padding: 0.25rem 0.65rem;
-        font-family: var(--mono);
-        font-size: 0.68rem;
+        gap: 0.75rem;
       }
 
       footer {
         display: flex;
         justify-content: space-between;
         gap: 1rem;
-        border-top: 1px solid var(--border);
-        padding: 2rem 4rem;
-        color: var(--muted);
-        font-family: var(--mono);
-        font-size: 0.72rem;
+        border-top: 1px solid var(--glass-border);
+        padding: 2.5rem 4rem;
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
       }
 
       @media (max-width: 900px) {
-        nav {
-          padding: 1rem 1.5rem;
-        }
-
-        .detail-hero,
-        .section {
-          padding-left: 1.5rem;
-          padding-right: 1.5rem;
-        }
-
-        .overview-grid,
-        .metrics,
-        .gallery {
-          grid-template-columns: 1fr;
-        }
-
-        .detail-hero {
-          padding-top: 7rem;
-        }
-
-        footer {
-          flex-direction: column;
-          padding: 2rem 1.5rem;
-        }
+        nav { width: 95%; padding: 1rem 1.5rem; top: 1rem; }
+        .detail-hero { padding-top: 8rem; padding-left: 1.5rem; padding-right: 1.5rem; }
+        .overview-grid, .metrics, .gallery { grid-template-columns: 1fr; }
+        footer { flex-direction: column; text-align: center; }
       }
     </style>
   </head>
   <body>
-    <nav>
-      <a class="nav-logo" href="index.html">IRSYAD();</a>
-      <a class="nav-back" href="index.html#projects">&larr; Back to projects</a>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <nav class="glass-panel hover-target">
+      <a class="nav-logo" href="index.html">IRSYAD<span>();</span></a>
+      <a class="nav-back hover-target" href="index.html#projects">&larr; Back to projects</a>
     </nav>
 
     <main>
       <section class="detail-hero">
-        <div>
+        <div class="reveal">
           <span class="eyebrow" id="projectType">Project Template</span>
           <h1 id="projectTitle">Project Detail Template</h1>
           <p class="lead" id="projectLead">
@@ -394,32 +267,32 @@
             technical approach, and measurable results.
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#overview">Read case study</a>
-            <a class="btn btn-outline" href="#gallery">View images</a>
+            <a class="btn btn-primary hover-target" href="#overview">Read case study</a>
+            <a class="btn btn-outline hover-target" href="#gallery">View images</a>
           </div>
         </div>
       </section>
 
       <section class="section" id="overview">
         <div class="section-inner">
-          <div class="section-header">
+          <div class="section-header reveal">
             <span class="section-num">01.</span>
             <h2 class="section-title">Overview</h2>
             <div class="section-line"></div>
           </div>
           <div class="overview-grid">
-            <article class="panel">
+            <article class="panel glass-panel reveal tilt-element hover-target">
               <h3>What this project is about</h3>
               <p id="overviewText"></p>
             </article>
-            <aside class="panel facts" id="facts"></aside>
+            <aside class="panel facts glass-panel reveal tilt-element hover-target" id="facts"></aside>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="section-inner">
-          <div class="section-header">
+          <div class="section-header reveal">
             <span class="section-num">02.</span>
             <h2 class="section-title">Impact</h2>
             <div class="section-line"></div>
@@ -430,17 +303,17 @@
 
       <section class="section">
         <div class="section-inner">
-          <div class="section-header">
+          <div class="section-header reveal">
             <span class="section-num">03.</span>
             <h2 class="section-title">Process</h2>
             <div class="section-line"></div>
           </div>
           <div class="overview-grid">
-            <article class="panel">
+            <article class="panel glass-panel reveal tilt-element hover-target">
               <h3>Problem</h3>
               <p id="problemText"></p>
             </article>
-            <article class="panel">
+            <article class="panel glass-panel reveal tilt-element hover-target">
               <h3>Solution</h3>
               <p id="solutionText"></p>
             </article>
@@ -450,7 +323,7 @@
 
       <section class="section" id="gallery">
         <div class="section-inner">
-          <div class="section-header">
+          <div class="section-header reveal">
             <span class="section-num">04.</span>
             <h2 class="section-title">Images</h2>
             <div class="section-line"></div>
@@ -461,12 +334,12 @@
 
       <section class="section">
         <div class="section-inner">
-          <div class="section-header">
+          <div class="section-header reveal">
             <span class="section-num">05.</span>
             <h2 class="section-title">Technology</h2>
             <div class="section-line"></div>
           </div>
-          <div class="panel">
+          <div class="panel glass-panel reveal tilt-element hover-target">
             <div class="tags" id="techTags"></div>
           </div>
         </div>
@@ -475,10 +348,68 @@
 
     <footer>
       <span>&copy; 2026 Irsyad Iffwat.</span>
-      <span>Project case study template</span>
+      <span class="text-gradient">Project case study</span>
     </footer>
 
     <script>
+      // Smooth Custom Cursor
+      const cursorDot = document.getElementById("cursor-dot");
+      const cursorOutline = document.getElementById("cursor-outline");
+      const hoverTargets = document.querySelectorAll(".hover-target");
+
+      window.addEventListener("mousemove", (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+
+        cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 500, fill: "forwards" });
+      });
+
+      hoverTargets.forEach(target => {
+        target.addEventListener("mouseenter", () => {
+          document.body.classList.add("cursor-hover");
+        });
+        target.addEventListener("mouseleave", () => {
+          document.body.classList.remove("cursor-hover");
+        });
+      });
+
+      // 3D Vanilla Tilt Effect for Cards
+      const tiltElements = document.querySelectorAll(".tilt-element");
+      tiltElements.forEach(el => {
+          el.addEventListener("mousemove", e => {
+              const rect = el.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              const xPct = x / rect.width - 0.5;
+              const yPct = y / rect.height - 0.5;
+              
+              el.style.transform = `perspective(1000px) rotateY(${xPct * 8}deg) rotateX(${yPct * -8}deg) scale3d(1.01, 1.01, 1.01)`;
+          });
+          el.addEventListener("mouseleave", () => {
+              el.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`;
+          });
+      });
+
+      // Scroll Reveal
+      const reveals = document.querySelectorAll(".reveal");
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+      
+      reveals.forEach((el) => observer.observe(el));
+
+      // Data rendering logic
       const projects = {
         investment: {
           type: "Final Year Project",
@@ -490,53 +421,25 @@
             "Most platform comparison pages rely on broad star ratings or static descriptions, which do not explain why a platform is suitable for a specific user's concerns.",
           solution:
             "I built a review analysis pipeline, fine-tuned BERT for aspect and sentiment classification, then presented ranked recommendations and sentiment breakdowns through a practical dashboard-style interface.",
-          heroImage:
-            "",
           gallery: [
-            {
-              src: "https://i.postimg.cc/2yNXR506/Recommendation-1.jpg",
-              caption: "Recommendation landing screen",
-            },
-            {
-              src: "https://i.postimg.cc/tJdvXHcp/Recommendation-2.jpg",
-              caption: "Platform comparison workflow",
-            },
-            {
-              src: "https://i.postimg.cc/d3RNqKfv/Recommendation-3.jpg",
-              caption: "Sentiment and aspect output",
-            },
-            {
-              src: "https://i.postimg.cc/Y2RFCDQF/Waterfall.jpg",
-              caption: "Modified Waterfall Methodology",
-            },
-            {
-              src: "https://i.postimg.cc/RVqWVSM1/Algo.jpg",
-              caption: "Algorithm Design",
-            },
-            {
-              src: "https://i.postimg.cc/VsZNhxjb/flow.jpg",
-              caption: "Flowchart",
-            },
+            { src: "https://i.postimg.cc/2yNXR506/Recommendation-1.jpg", caption: "Recommendation landing screen" },
+            { src: "https://i.postimg.cc/tJdvXHcp/Recommendation-2.jpg", caption: "Platform comparison workflow" },
+            { src: "https://i.postimg.cc/d3RNqKfv/Recommendation-3.jpg", caption: "Sentiment and aspect output" },
+            { src: "https://i.postimg.cc/Y2RFCDQF/Waterfall.jpg", caption: "Modified Waterfall Methodology" },
+            { src: "https://i.postimg.cc/RVqWVSM1/Algo.jpg", caption: "Algorithm Design" },
+            { src: "https://i.postimg.cc/VsZNhxjb/flow.jpg", caption: "Flowchart" },
           ],
           facts: {
             Role: "ML/NLP developer",
             Duration: "Final year project",
-            Focus: "ABSA, recommendation logic, web app",
+            Focus: "ABSA, recommendation logic",
           },
           metrics: [
-            ["99%", "prediction accuracy achieved in project evaluation"],
+            ["99%", "prediction accuracy"],
             ["91", "System Usability Scale score"],
-            ["4+", "review aspects used for recommendation ranking"],
+            ["4+", "review aspects used for ranking"],
           ],
-          tech: [
-            "Python",
-            "Flask",
-            "BERT",
-            "PyTorch",
-            "HuggingFace",
-            "ABSA",
-            "Chart.js",
-          ],
+          tech: ["Python", "Flask", "BERT", "PyTorch", "HuggingFace", "ABSA", "Chart.js"],
         },
         elvira: {
           type: "Full-Stack Development",
@@ -552,34 +455,23 @@
             { src: "https://i.postimg.cc/FsCRk2Pc/Login.jpg", caption: "Login screen" },
             { src: "https://i.postimg.cc/pXcT5g0K/Landing.jpg", caption: "Landing screen" },
             { src: "https://i.postimg.cc/bNVJSK6k/Menu.jpg", caption: "Menu screen" },
-              { src: "https://i.postimg.cc/Dyw0Z2c1/Update-profile.jpg", caption: "Update profile screen" },
-              { src: "https://i.postimg.cc/28Sy6zx4/Attendance-record.jpg", caption: "Attendance record screen" },
-              { src: "https://i.postimg.cc/kXgG4ny8/Data-Center.jpg", caption: "Document record screen" },
-              { src: "https://i.postimg.cc/xCKTL59w/Inventory.jpg", caption: "Smart Inventory screen" },
-              { src: "https://i.postimg.cc/dVyM71s6/Usecase-drawio.png", caption: "Use case Digram" }
-                
-
-
+            { src: "https://i.postimg.cc/Dyw0Z2c1/Update-profile.jpg", caption: "Update profile screen" },
+            { src: "https://i.postimg.cc/28Sy6zx4/Attendance-record.jpg", caption: "Attendance record screen" },
+            { src: "https://i.postimg.cc/kXgG4ny8/Data-Center.jpg", caption: "Document record screen" },
+            { src: "https://i.postimg.cc/xCKTL59w/Inventory.jpg", caption: "Smart Inventory screen" },
+            { src: "https://i.postimg.cc/dVyM71s6/Usecase-drawio.png", caption: "Use case Diagram" }
           ],
           facts: {
             Role: "Full-stack developer",
             Platform: "Internal admin system",
-            Focus: "Operations, workflows, dashboards",
+            Focus: "Operations, workflows",
           },
           metrics: [
             ["8+", "operation modules centralized"],
-            ["1", "portal for staff and admin workflows"],
-            ["RBAC", "role-specific access and activity views"],
+            ["1", "portal for workflows"],
+            ["RBAC", "role-specific views"],
           ],
-          tech: [
-            "Laravel",
-            "PHP",
-            "MySQL",
-            "Blade",
-            "Tailwind CSS",
-            "Alpine.js",
-            "Vite",
-          ],
+          tech: ["Laravel", "PHP", "MySQL", "Blade", "Tailwind CSS", "Alpine.js", "Vite"],
         },
         "war-room": {
           type: "Data Analyst Internship",
@@ -598,21 +490,15 @@
           ],
           facts: {
             Role: "Data analyst intern",
-            Organization: "Jabatan Pendidikan Negeri Sembilan",
+            Organization: "JPNS",
             Focus: "SPM analytics and visualization",
           },
           metrics: [
-            ["2017-2022", "historical result period analyzed"],
-            ["3", "connected tools for reporting workflow"],
-            ["Access", "controlled views for education officers"],
+            ["2017-2022", "historical result period"],
+            ["3", "connected tools for workflow"],
+            ["Access", "controlled views"],
           ],
-          tech: [
-            "Google Sheets",
-            "Looker Studio",
-            "AppSheet",
-            "Data Visualization",
-            "Access Control",
-          ],
+          tech: ["Google Sheets", "Looker Studio", "AppSheet", "Data Visualization", "Access Control"],
         },
       };
 
@@ -633,20 +519,20 @@
         .join("");
 
       document.getElementById("metrics").innerHTML = project.metrics
-        .map(([value, label]) => `<div class="metric"><strong>${value}</strong><span>${label}</span></div>`)
+        .map(([value, label]) => `<div class="metric glass-panel reveal tilt-element hover-target"><strong class="text-gradient">${value}</strong><span>${label}</span></div>`)
         .join("");
 
       document.getElementById("galleryGrid").innerHTML = project.gallery
-        .map((item) => {
+        .map((item, index) => {
           const media = item.src
             ? `<img src="${item.src}" alt="${item.caption}" />`
             : `<div class="visual-placeholder">${item.caption}</div>`;
-          return `<figure class="gallery-item">${media}<figcaption class="gallery-caption">${item.caption}</figcaption></figure>`;
+          return `<figure class="gallery-item glass-panel reveal tilt-element hover-target" style="transition-delay: ${index * 50}ms">${media}<figcaption class="gallery-caption">${item.caption}</figcaption></figure>`;
         })
         .join("");
 
       document.getElementById("techTags").innerHTML = project.tech
-        .map((tag) => `<span class="tag">${tag}</span>`)
+        .map((tag) => `<span class="tag hover-target">${tag}</span>`)
         .join("");
     </script>
   </body>
