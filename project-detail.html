@@ -464,8 +464,7 @@
           });
       });
 
-      // Scroll Reveal
-      const reveals = document.querySelectorAll(".reveal");
+      // Scroll Reveal setup
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -474,8 +473,11 @@
           }
         });
       }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-      
-      reveals.forEach((el) => observer.observe(el));
+
+      function observeReveals() {
+        document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+      }
+      observeReveals();
 
       // Data rendering logic
       const projects = {
@@ -629,6 +631,9 @@
       document.getElementById("techTags").innerHTML = project.tech
         .map((tag) => `<span class="tag hover-target">${tag}</span>`)
         .join("");
+        
+      // Re-run observer on newly injected dynamic elements
+      observeReveals();
     </script>
   </body>
 </html>
