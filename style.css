@@ -92,6 +92,14 @@ body::after {
   z-index: -1;
 }
 
+/* Particle Canvas */
+#particle-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
@@ -209,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
 .section {
   position: relative;
   z-index: 1;
-  padding: 8rem 4rem;
+  padding: 5rem 4rem 8rem;
 }
 
 .section-inner {
@@ -392,7 +400,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 900px) {
   .section {
-    padding: 5rem 1.25rem;
+    padding: 3.5rem 1.25rem 5rem;
   }
   .section-title {
     font-size: 2rem;
