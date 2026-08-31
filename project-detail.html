@@ -609,6 +609,36 @@
           ],
           tech: ["Google Apps Script", "Google Forms", "Google Sheets", "JavaScript"],
         },
+        tms: {
+          type: "Full-Stack Development",
+          title: "Isobot Soccer Tournament Management System",
+          lead: "A real-time tournament lifecycle platform built for a multi-category Isobot Soccer competition — managing 126 teams across 4 categories from check-in through knockout finals.",
+          overview:
+            "This system digitizes the entire tournament workflow for an Isobot Soccer (2v2 robot soccer) event. It replaces manual bracket management with automated group draws, round-robin scheduling, knockout bracket generation, live score entry, and a TV display mode. The platform handles 4 competition categories (U12, U15, U20, PPKI) with distinct tournament formats — including a round-robin-only format for the PPKI inclusion category.",
+          problem:
+            "Tournament brackets were built before attendance was confirmed, leading to ghost teams and manual rescheduling. Score tracking was done on paper, causing delays and errors. There was no centralized view for organizers or spectators to follow live progress.",
+          solution:
+            "I built a Laravel + Livewire application with a phased workflow: Import registration data → Check-in teams on event day → Lock attendance → Auto-generate groups & schedules → Input scores with real-time standings → Generate knockout brackets → Stream results to a TV display. The system auto-handles tiebreakers, byes for odd team counts, and dual-track knockout (Trophy & Cup brackets).",
+          gallery: [
+            { caption: "Admin Dashboard" },
+            { caption: "Team Check-In Interface" },
+            { caption: "Group Draw & Round Robin Schedule" },
+            { caption: "Live Score Entry" },
+            { caption: "Knockout Bracket View" },
+            { caption: "TV Display Mode" },
+          ],
+          facts: {
+            Role: "Full-stack developer",
+            Event: "Isobot Soccer Competition",
+            Scale: "126 teams, 4 categories",
+          },
+          metrics: [
+            ["126", "teams managed across 4 categories"],
+            ["4", "tournament phases automated end-to-end"],
+            ["Real-time", "live TV display & scoring"],
+          ],
+          tech: ["Laravel", "Livewire", "PHP", "MySQL", "Tailwind CSS", "Alpine.js", "DaisyUI", "Vite"],
+        },
       };
 
       const params = new URLSearchParams(window.location.search);
