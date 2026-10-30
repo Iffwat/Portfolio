@@ -644,7 +644,7 @@
         </div>
         <h1>
           <span class="name">IRSYAD IFFWAT</span>
-          <span class="role text-gradient" id="typed-role"><span class="typed-cursor"></span></span>
+          <span class="role text-gradient">Software Engineer</span>
         </h1>
         <p class="hero-desc">
           Software Engineer at <span>Elvira Systems</span> passionate about building <span>practical software solutions</span>, exploring <span>cloud infrastructure</span>, and automating <span>development workflows</span>.
@@ -1575,30 +1575,7 @@
       });
 
       /* ============================================================
-         3. TYPEWRITER
-      ============================================================ */
-      const roles = ['Software Engineer', 'Full Stack Developer', 'Cloud & DevOps Enthusiast'];
-      const roleEl = document.getElementById('typed-role');
-      let ri = 0, ci = 0, del = false;
-
-      function typeStep() {
-        const cur = roles[ri];
-        const cursor = '<span class="typed-cursor"></span>';
-        if (!del) {
-          roleEl.innerHTML = cur.slice(0, ci+1) + cursor;
-          ci++;
-          if (ci === cur.length) { setTimeout(() => { del=true; typeStep(); }, 2000); return; }
-        } else {
-          roleEl.innerHTML = cur.slice(0, ci-1) + cursor;
-          ci--;
-          if (ci === 0) { del=false; ri=(ri+1)%roles.length; }
-        }
-        setTimeout(typeStep, del ? 40 : 80);
-      }
-      setTimeout(typeStep, 1500);
-
-      /* ============================================================
-         4. NAV SCROLL HIGHLIGHT + SCROLLED CLASS
+         3. NAV SCROLL HIGHLIGHT + SCROLLED CLASS
       ============================================================ */
       const nav   = document.getElementById('main-nav');
       const links = document.querySelectorAll('.nav-link');
