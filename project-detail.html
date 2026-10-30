@@ -481,35 +481,31 @@
 
       // Data rendering logic
       const projects = {
-        investment: {
-          type: "Final Year Project",
-          title: "Investment Platform Recommendation System",
-          lead: "A sentiment-driven recommendation system that helps users compare digital asset investment platforms using review-based insights instead of generic ratings.",
+        homelab: {
+          type: "Cloud & DevOps",
+          title: "DevOps Homelab",
+          lead: "A self-hosted Linux server and automated deployment pipeline configured on dedicated hardware, running Nginx and GitHub Actions CI/CD workflows.",
           overview:
-            "This project combines aspect-based sentiment analysis, BERT classification, and a Flask web interface to recommend investment platforms based on user priorities such as trust, usability, fees, and support. The system turns large volumes of review text into more explainable platform rankings.",
+            "Built a personal Linux server using an old laptop to establish an authentic bare-metal DevOps environment. Configured Ubuntu Server with Nginx as a reverse proxy, registered a self-hosted GitHub Actions runner for continuous deployment, enforced SSH key-based authentication, and structured fine-grained Linux user permissions.",
           problem:
-            "Most platform comparison pages rely on broad star ratings or static descriptions, which do not explain why a platform is suitable for a specific user's concerns.",
+            "Relying exclusively on third-party cloud platforms can obscure low-level system administration fundamentals like Linux user permissions, reverse proxy configuration, SSH security, and self-hosted automation infrastructure.",
           solution:
-            "I built a review analysis pipeline, fine-tuned BERT for aspect and sentiment classification, then presented ranked recommendations and sentiment breakdowns through a practical dashboard-style interface.",
+            "Repurposed hardware into a production-like Linux environment. Installed Ubuntu Server, hardened SSH access, configured Nginx web hosting, and linked a GitHub Actions self-hosted runner to automatically test and deploy web projects on code commit.",
           gallery: [
-            { src: "https://i.postimg.cc/2yNXR506/Recommendation-1.jpg", caption: "Recommendation landing screen" },
-            { src: "https://i.postimg.cc/tJdvXHcp/Recommendation-2.jpg", caption: "Platform comparison workflow" },
-            { src: "https://i.postimg.cc/d3RNqKfv/Recommendation-3.jpg", caption: "Sentiment and aspect output" },
-            { src: "https://i.postimg.cc/Y2RFCDQF/Waterfall.jpg", caption: "Modified Waterfall Methodology" },
-            { src: "https://i.postimg.cc/RVqWVSM1/Algo.jpg", caption: "Algorithm Design" },
-            { src: "https://i.postimg.cc/VsZNhxjb/flow.jpg", caption: "Flowchart" },
+            { src: "https://images.openai.com/static-rsc-4/t2KkrLy60_WtasrsKRWZOpe5CInQzvEDnjGjUx7pHba_Dh3Xo9p6hB1arwVMavmBKBq1tsHNn2aoN5KA7P5ZK_I6whX_AIcqoSLluIjEavtKAvfrUdMDfIzU1Y7mga0PHnRhr5U92VGv5U8AnlATubdy59xxS5avX-ySUA4Di7U?purpose=inline", caption: "Nginx Server & Homelab Architecture" },
           ],
           facts: {
-            Role: "ML/NLP developer",
-            Duration: "Final year project",
-            Focus: "ABSA, recommendation logic",
+            Server: "Ubuntu Server (Linux)",
+            Webserver: "Nginx",
+            "CI/CD": "GitHub Actions Self-Hosted",
+            Security: "SSH Keys & Permissions",
           },
           metrics: [
-            ["99%", "prediction accuracy"],
-            ["91", "System Usability Scale score"],
-            ["4+", "review aspects used for ranking"],
+            ["100%", "automated git-to-server deployment"],
+            ["Ubuntu", "dedicated bare-metal homelab server"],
+            ["SSH", "hardened key-based access control"],
           ],
-          tech: ["Python", "Flask", "BERT", "PyTorch", "HuggingFace", "ABSA", "Chart.js"],
+          tech: ["Linux", "Ubuntu Server", "Nginx", "GitHub Actions", "CI/CD", "SSH", "Bash", "Git"],
         },
         elvira: {
           type: "Full-Stack Development",
@@ -522,6 +518,7 @@
           solution:
             "I developed full-stack modules using Laravel, MySQL, Blade, Tailwind CSS, Alpine.js, and Vite, with focused screens for each workflow and admin visibility across the system.",
           gallery: [
+            { src: "https://images.openai.com/static-rsc-4/OS7hF3sEBouUuhWc9L8iKD-_OAgfQ4R1CK8JoZxFu_ftpf5V95Uo_SFCzBFMrNEy852mSDLWqCZISI8ldAIcPRHJxmD55oRAlsa5ZgUNr2jmClfQY6SvZ0Yw1LabAi8lGEDN8Pz-0rNzH5sdo_tR5E8H0pzu4Yn0K6v1c3xXpiE?purpose=inline", caption: "Workforce & Admin Management Overview" },
             { src: "https://i.postimg.cc/FsCRk2Pc/Login.jpg", caption: "Login screen" },
             { src: "https://i.postimg.cc/pXcT5g0K/Landing.jpg", caption: "Landing screen" },
             { src: "https://i.postimg.cc/bNVJSK6k/Menu.jpg", caption: "Menu screen" },
@@ -545,42 +542,132 @@
           ],
           facts: {
             Role: "Full-stack developer",
-            Platform: "Internal admin system",
-            Focus: "Operations, workflows",
+            Modules: "Attendance, Leaves, Claims, Tasks, Inventory",
+            Platform: "Enterprise Admin Ecosystem",
           },
           metrics: [
             ["8+", "operation modules centralized"],
-            ["1", "portal for workflows"],
-            ["RBAC", "role-specific views"],
+            ["1", "unified portal for daily workflows"],
+            ["RBAC", "role-specific security views"],
           ],
-          tech: ["Laravel", "PHP", "MySQL", "Blade", "Tailwind CSS", "Alpine.js", "Vite"],
+          tech: ["Laravel", "PHP", "MySQL", "JavaScript", "Google Apps Script", "Tailwind CSS", "Alpine.js", "Vite"],
         },
-        "war-room": {
-          type: "Data Analyst Internship",
-          title: "War Room SPM Dashboard 2023",
-          lead: "A dashboard project for Jabatan Pendidikan Negeri Sembilan to analyze historical SPM performance and support target-setting for upcoming examinations.",
+        tms: {
+          type: "Full-Stack Development",
+          title: "MIRC2026 Tournament Management System",
+          lead: "A web-based tournament platform built for the Microbit Innovation Robotic Competition (mIRC) 2026 — automating registration, scheduling, live scoring, and big-screen displays.",
           overview:
-            "The dashboard helps education officers compare SPM results, explore performance trends from 2017 to 2022, and identify strategic targets at school and subject level.",
+            "Engineered for the Microbit Innovation Robotic Competition (mIRC) 2026, this system replaces manual clipboards and scattered sheets with an integrated tournament management engine. Features real-time check-in, automated group draws and match timers, field allocation, seeding, BYE handling, live scoring, and dedicated TV display dashboards for spectators and teams.",
           problem:
-            "Historical results were difficult to compare quickly across years, schools, and subjects, especially when officers needed clear views for planning discussions.",
+            "Tournament organizers manually produced match schedules prior to game day, causing chaotic schedule breakdowns whenever teams failed to show up. Paper scoring slowed reporting and prevented real-time venue audience engagement.",
           solution:
-            "I structured the source data, created visual reporting views in Looker Studio, and supported access-controlled workflows using Google Sheets and AppSheet.",
+            "Engineered a dynamic event workflow: teams check in on event morning, the system locks confirmed participants, and immediately generates round-robin groups and knockout brackets. Match scores update in real time on venue displays.",
           gallery: [
-            { caption: "Performance dashboard placeholder" },
-            { caption: "School comparison placeholder" },
-            { caption: "Target analysis placeholder" },
+            { src: "https://images.openai.com/static-rsc-4/WDFwSi2WJGm8Bfg0ri7QoyhgPkO3iuw4wrfWhKuqpcYqdwRnD_LTDH1eCQuSHETpvh4fzmrPAXkAGZ9ZG9d2m4gzWJ7IfnBCk2_zv3Lvm_GxMZjA7T3X3OxXHsTl777HL2TTAo4i1TwfW5EeQbQGqcnErS5vCQzeR3OsiBGRBWg?purpose=inline", caption: "Live Competition Dashboard & Venue Display" },
+            { src: "https://i.postimg.cc/hvhYncKx/Creating-a-competition-poster-202608271425.jpg", caption: "mIRC Competition Poster" },
+            { src: "https://i.postimg.cc/4xLfCXJz/image.png", caption: "Admin Dashboard" },
+            { src: "https://i.postimg.cc/prRbhSWt/image.png", caption: "Team Check-In" },
+            { src: "https://i.postimg.cc/kXMP7LYf/image.png", caption: "Group Schedule" },
+            { src: "https://i.postimg.cc/FKL2Pv1m/image.png", caption: "Live Score Entry" },
+            { src: "https://i.postimg.cc/4yBMKNFC/image.png", caption: "Knockout Bracket" },
+            { src: "https://i.postimg.cc/9fZndBNX/image.png", caption: "Participant View" },
           ],
           facts: {
-            Role: "Data analyst intern",
-            Organization: "JPNS",
-            Focus: "SPM analytics and visualization",
+            Role: "Full-stack developer",
+            Event: "Microbit Innovation Robotic Competition 2026",
+            Scale: "126 teams · 4 categories",
+            Features: "Match timers, live TV scoreboard, brackets",
           },
           metrics: [
-            ["2017-2022", "historical result period"],
-            ["3", "connected tools for workflow"],
-            ["Access", "controlled views"],
+            ["126", "teams managed in real-time"],
+            ["4", "automated stages from check-in to finals"],
+            ["Live", "instant scoreboard on venue displays"],
           ],
-          tech: ["Google Sheets", "Looker Studio", "AppSheet", "Data Visualization", "Access Control"],
+          tech: ["Laravel", "Livewire", "PHP", "MySQL", "Tailwind CSS", "Alpine.js", "Google Sheets", "JavaScript", "Vite"],
+        },
+        "aws-labs": {
+          type: "Cloud Infrastructure",
+          title: "AWS Cloud Labs",
+          lead: "Hands-on implementation of resilient, secure, and scalable cloud architectures on Amazon Web Services.",
+          overview:
+            "Constructed foundational and multi-tier cloud environments across core AWS services following the AWS Well-Architected Framework. Configured EC2 compute instances with custom security groups and CloudWatch monitoring, hosted high-availability static web assets on S3, distributed content globally through CloudFront CDN with Route 53 DNS routing, and practiced database isolation and serverless computing with RDS and AWS Lambda.",
+          problem:
+            "Modern web systems require scalable infrastructure that isolates compute from static assets, maintains low-latency global delivery, and provides resilient security boundaries across multi-tier networks.",
+          solution:
+            "Configured custom VPC networks with public and private subnets, provisioned EC2 instances with CloudWatch monitoring, established S3 bucket policies with CloudFront Origin Access Control (OAC), and configured serverless workflows to achieve high reliability and least-privilege security.",
+          gallery: [
+            { src: "https://images.openai.com/static-rsc-4/DnybwBBc5taS0x2kCdqn0Jed7Ts96ld-i-yf_J0Ly_9Lc5J7Q3fgSydhdesHnNxJwpu35p-0vhByT_4pyPMpapGU9Ul1Z2iFJ_GW1utCHskkdIBxPzAWnIFGcKqSOwDplI0O9q9MygHr_fxux0b7oVEGMjplMifvU-ofP7Xth5M?purpose=inline", caption: "AWS Cloud Solution Architecture" },
+          ],
+          facts: {
+            Provider: "Amazon Web Services (AWS)",
+            Networking: "VPC, Route 53, CloudFront",
+            Compute: "EC2 & Lambda",
+            Storage: "S3 & RDS",
+          },
+          metrics: [
+            ["8+", "AWS services integrated and tested"],
+            ["VPC", "multi-tier isolated network architecture"],
+            ["IAM", "least-privilege access policies"],
+          ],
+          tech: ["AWS", "EC2", "S3", "IAM", "VPC", "Route 53", "CloudFront", "RDS", "Lambda"],
+        },
+        investment: {
+          type: "AI & Machine Learning",
+          title: "Personalized Investment Platform Recommendation System",
+          lead: "A sentiment-driven recommendation system that analyzes digital asset investment platforms using Aspect-Based Sentiment Analysis (ABSA) and BERT models.",
+          overview:
+            "This project combines aspect-based sentiment analysis, fine-tuned BERT and FinBERT models, and a Python Flask web interface to evaluate and recommend investment platforms based on authentic user reviews. The system extracts specific aspects such as trust, fees, customer support, and usability to provide transparent, data-driven rankings.",
+          problem:
+            "Most financial platform comparisons rely on generic star ratings or sponsored promotional claims, failing to reveal nuanced user sentiment across specific platform criteria like security and fees.",
+          solution:
+            "I engineered an end-to-end NLP pipeline using BERT and FinBERT with PyABSA to perform aspect extraction and sentiment polarity classification. The models achieved 81.25% sentiment accuracy and 28.12% aspect accuracy on real-world review datasets.",
+          gallery: [
+            { src: "https://images.openai.com/static-rsc-4/RvDhHp3f0YKvqTRP-i4Emi2qgF77SDe4unJJtHcXKGh7mFqVl1E9QYssiULScH6kOpU15pbWcZvpyzMIpjsj5zVxdpX_u-P70_69cwzEbp_7LYd5DepLEZi8Di3TlNICHA6kZWt30L9OVsbRtFLqYFb6AKTPWMTb2Hod1mMzCh4?purpose=inline", caption: "Investment Sentiment Platform" },
+            { src: "https://i.postimg.cc/2yNXR506/Recommendation-1.jpg", caption: "Recommendation landing screen" },
+            { src: "https://i.postimg.cc/tJdvXHcp/Recommendation-2.jpg", caption: "Platform comparison workflow" },
+            { src: "https://i.postimg.cc/d3RNqKfv/Recommendation-3.jpg", caption: "Sentiment and aspect output" },
+            { src: "https://i.postimg.cc/Y2RFCDQF/Waterfall.jpg", caption: "Modified Waterfall Methodology" },
+            { src: "https://i.postimg.cc/RVqWVSM1/Algo.jpg", caption: "Algorithm Design" },
+            { src: "https://i.postimg.cc/VsZNhxjb/flow.jpg", caption: "Flowchart" },
+          ],
+          facts: {
+            Role: "AI / ML & Full-Stack Developer",
+            Focus: "ABSA, Aspect Extraction, FinBERT",
+            Frameworks: "PyTorch, HuggingFace, PyABSA",
+          },
+          metrics: [
+            ["81.25%", "sentiment classification accuracy"],
+            ["28.12%", "aspect extraction accuracy"],
+            ["8,000+", "user reviews scraped & processed"],
+          ],
+          tech: ["Python", "Flask", "BERT", "FinBERT", "PyABSA", "PyTorch", "HuggingFace", "Chart.js"],
+        },
+        "war-room": {
+          type: "Data Administrator Internship",
+          title: "War Room SPM Dashboard 2023",
+          lead: "A centralized education data administration and reporting dashboard built for Jabatan Pendidikan Negeri Sembilan (Unit TMK) to evaluate historical SPM performance.",
+          overview:
+            "The dashboard helped education officers compare historical SPM results, analyze school and subject performance trends from 2017 to 2022, and establish data-informed strategic targets across state schools.",
+          problem:
+            "Historical examination results were spread across fragmented spreadsheets, making multi-year analysis and school comparisons slow and tedious for educational planners.",
+          solution:
+            "I structured the administrative data pipeline, built automated reporting views in Looker Studio, and developed access-controlled workflows using Google Sheets and AppSheet.",
+          gallery: [
+            { src: "https://images.openai.com/static-rsc-4/0Hcml8LdLZuFyh5m1a99hC5PnbMiQNC2AggYeplhsofIet2ErzPh4JFHqooMs7OdDwSmznOYpGVeQSSvdD_kwS7zZWMr2pqxQ0q3yH9uEZWMUhRvyi1ZeFAkPNFrsVRk_a6YdpJs84utNn865eGC18bmoCpxcaqfRKA9ryIP-Yo?purpose=inline", caption: "Education Performance Dashboard" },
+            { caption: "School Comparison View" },
+            { caption: "Target Analysis and Subject Drill-down" },
+          ],
+          facts: {
+            Role: "Data Administrator Intern",
+            Organization: "JPNS – Unit TMK",
+            Focus: "SPM Analytics and Data Management",
+          },
+          metrics: [
+            ["2017–2022", "historical result years analyzed"],
+            ["3", "integrated tools (Sheets, Looker, AppSheet)"],
+            ["Unit TMK", "administrative initiative support"],
+          ],
+          tech: ["Google Sheets", "Looker Studio", "AppSheet", "Data Reporting", "Access Control"],
         },
         registration: {
           type: "Web Application",
@@ -609,42 +696,11 @@
           ],
           tech: ["Google Apps Script", "Google Forms", "Google Sheets", "JavaScript"],
         },
-        tms: {
-          type: "Full-Stack Development",
-          title: "mIRC Tournament Management System",
-          lead: "A web-based system that runs an entire tournament from start to finish — from team registration and attendance, all the way to live match results and the final bracket.",
-          overview:
-            "Built for the Microbit Innovation Robotic Competition (mIRC), this system replaces the traditional clipboard-and-spreadsheet approach with a fully digital tournament experience. Organizers can check teams in on the day, automatically generate group schedules, enter scores after each match, and watch the knockout bracket update in real time. A dedicated TV display mode streams live standings and results to spectators in the venue.",
-          problem:
-            "Tournament organizers were manually building match schedules before the event day — meaning any team that didn't show up caused schedule conflicts that had to be fixed on the spot. Scores were tracked on paper, results were slow to communicate, and there was no single place for everyone to follow the tournament.",
-          solution:
-            "I designed a step-by-step digital workflow: teams are checked in on the day, the system locks the final attendance list, then automatically generates groups, round-robin schedules, and knockout brackets based on who actually showed up. Scores are entered digitally, standings update instantly, and a separate display screen shows live results to everyone in the venue — no manual updates needed.",
-          gallery: [
-            { src: "https://i.postimg.cc/hvhYncKx/Creating-a-competition-poster-202608271425.jpg", caption: "mIRC Competition Poster" },
-            { src: "https://i.postimg.cc/4xLfCXJz/image.png",caption: "Admin Dashboard" },
-            { src: "https://i.postimg.cc/prRbhSWt/image.png", caption: "Team Check-In" },
-            { src: "https://i.postimg.cc/kXMP7LYf/image.png", caption: "Group Schedule" },
-            { src: "https://i.postimg.cc/FKL2Pv1m/image.png", caption: "Live Score Entry" },
-            { src: "https://i.postimg.cc/4yBMKNFC/image.png", caption: "Knockout Bracket" },
-            { src: "https://i.postimg.cc/9fZndBNX/image.png", caption: "Participant View" },
-          ],
-          facts: {
-            Role: "Full-stack developer",
-            Event: "Microbit Innovation Robotic Competition (mIRC)",
-            Scale: "126 teams · 4 categories",
-          },
-          metrics: [
-            ["126", "teams managed on event day"],
-            ["4", "stages automated from check-in to finals"],
-            ["Live", "real-time results on venue display"],
-          ],
-          tech: ["Laravel", "Livewire", "PHP", "MySQL", "Tailwind CSS", "Alpine.js", "DaisyUI", "Vite"],
-        },
       };
 
       const params = new URLSearchParams(window.location.search);
-      const slug = params.get("project") || "investment";
-      const project = projects[slug] || projects.investment;
+      const slug = params.get("project") || "homelab";
+      const project = projects[slug] || projects.homelab;
 
       document.title = `${project.title} - Irsyad Iffwat`;
       document.getElementById("projectType").textContent = project.type;
