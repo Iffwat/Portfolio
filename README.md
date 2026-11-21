@@ -1,50 +1,97 @@
-﻿# Portfolio
+# Irsyad Iffwat – Software Engineer Portfolio
 
-Portfolio
+> **Software Engineer | Full Stack Development | Cloud & DevOps Enthusiast**  
+> Permanent Software Engineer at Elvira Systems Sdn. Bhd. · Cyberjaya, Malaysia  
+> Bachelor of Computer Science (Hons) · Universiti Teknologi MARA (UiTM), Jasin, Melaka
 
+---
 
-Data Analyst Internship – Jabatan Pendidikan Negeri Sembilan (JPNS)
-Project: War Room SPM 2023
-Objective: Designed to assist education officers in planning strategic solutions for specific subjects and identifying key performance targets for upcoming SPM exam results based on historical trends.
-Scope & Technical Stack:
-Database: Utilized Google Sheets as the primary engine for data storage and management.
-Frontend Visualization: Built interactive dashboards in Looker Studio to provide real-time insights to stakeholders.
-Security: Implemented AppSheet to manage secure user authentication and granular authorization levels.
-Data Analysis: Conducted comprehensive exam result analysis, including longitudinal data from past SPM results (2017-2022) and internal school assessments (Mid and Final year exams).
+## 📌 Professional Overview
+I'm a Computer Science graduate and Software Engineer passionate about building practical software solutions, exploring cloud infrastructure, and automating development workflows.
 
-Final Year Project  – Personalized Investment Platform Recommendation System
-Project: Sentiment-Driven Digital Asset Advisor
-Objective: Engineered a dynamic web application to assist individual investors in selecting digital financial services by prioritizing authentic user experiences over marketing claims or generic numerical ratings.
-Scope & Technical Stack:
-Machine Learning & NLP: Leveraged BERT-base architecture, Aspect-Based Sentiment Analysis (ABSA), PyTorch, and HuggingFace for advanced text interpretation.
-Backend & Processing: Utilized Python, Flask, Pandas, and NumPy for robust data manipulation and server-side logic.
-Data Acquisition: Automated large-scale retrieval of 8,000+ reviews via google-play-scraper and custom HTML parsing scripts.
-Frontend Visualization: Built a responsive UI using HTML, CSS, and JavaScript, incorporating Chart.js for comparative visual analytics.
-Key Contributions & Architecture:
-NLP Modeling: Fine-tuned BERT to perform simultaneous aspect extraction and polarity classification across key dimensions like trust, usability, and fees.
-Recommendation Engine: Designed an algorithmic scoring system that computes personalized rankings by weighting sentiment data against user-defined priorities.
-Full-Stack Development: Deployed a Flask application featuring real-time review processing and interactive leaderboards with donut and radar chart visualizations.
-Performance Validation: Achieved a 99% prediction accuracy and F1-score, alongside an outstanding System Usability Scale (SUS) score of 91 during testing.
-Project Outcomes:
-The ABSA model demonstrated exceptional precision in classifying sentiment across positive, neutral, and negative categories.
-The finalized platform provided a highly intuitive stakeholder experience, confirming the effectiveness of the sentiment-driven approach.
+I have experience developing web applications, managing data-driven systems, and building administrative platforms. My technical interests include full-stack development, cloud computing, DevOps, Linux system administration, and AI.
 
-Full-Stack Development – Elvira Admin Portal
-Project: Integrated Workforce Management Ecosystem
-Objective: Engineered a centralized digital workspace to optimize internal operations by consolidating disparate administrative workflows into a unified, high-efficiency platform.
-Scope & Technical Stack:
-Framework & Language: Developed using Laravel and PHP for scalable server-side architecture.
-Database: Implemented MySQL for robust relational data management and storage.
-Frontend & UI: Crafted responsive interfaces using Blade Templates, Tailwind CSS, Alpine.js, and Vite.
-Security: Configured sophisticated role-based access controls and secure authentication protocols.
-Key Contributions & Architecture:
-System Design: Architected the complete application structure leveraging the Laravel MVC design pattern.
-Module Engineering: Built core business engines for attendance tracking, leave processing, and expense claims.
-Resource Management: Developed comprehensive systems for inventory monitoring, document repositories, and task oversight.
-Workflow Automation: Programmed complex validation logic and multi-tier approval pipelines for operational requests.
-Data Visualization: Designed dynamic dashboards providing role-specific insights and real-time activity monitoring.
-Project Outcomes:
-Achieved total digitization of administrative records, significantly reducing manual data handling and redundancy.
-Enhanced organizational transparency and accountability through improved visibility of staff activities and requests.
-Optimized inter-departmental collaboration by providing a centralized communication and document management hub.
+Currently, I'm expanding my expertise in AWS, containerization, CI/CD, and infrastructure automation while working on practical projects to strengthen my software engineering and cloud engineering skills.
 
+---
+
+## 🚀 Featured Projects
+
+### 01. DevOps Homelab
+- **Tech Stack:** Linux · Ubuntu Server · Nginx · GitHub Actions · SSH
+- Built a personal Linux server using an old laptop.
+- Configured Nginx to host a website.
+- Set up a GitHub Actions self-hosted runner for CI/CD automation.
+- Implemented SSH-based deployment workflows.
+- Configured deployment users and Linux file permissions.
+
+### 02. Elvira Admin Portal
+- **Tech Stack:** Laravel · PHP · JavaScript · Google Apps Script · MySQL · Tailwind CSS
+- Attendance tracking system.
+- Leave applications and claims management.
+- Document directory and event management.
+- Task, inventory, and order management.
+- Staff and registration management.
+
+### 03. MIRC2026 Tournament Management System
+- **Tech Stack:** Laravel · Livewire · MySQL · Tailwind CSS · Alpine.js · Google Sheets · JavaScript
+- Built for Microbit Innovation Robotic Competition (mIRC) 2026.
+- Dedicated admin, volunteer, and participant interfaces.
+- Big-screen scoreboard and live TV streaming pages.
+- Registration and master data management.
+- Match timers, field allocation, seeding, BYE handling, and real-time tournament brackets.
+
+### 04. AWS Cloud Labs
+- **Tech Stack:** AWS · EC2 · S3 · IAM · VPC · Route 53 · CloudFront · RDS · Lambda
+- EC2 web server deployment and security groups.
+- CloudWatch instance monitoring.
+- S3 static website hosting.
+- CloudFront CDN and Route 53 DNS routing.
+- Load balancing and serverless computing exercises.
+
+### 05. Personalized Investment Platform Recommendation System
+- **Tech Stack:** Python · BERT · FinBERT · PyABSA · PyTorch · Flask
+- Applied Aspect-Based Sentiment Analysis (ABSA) on authentic digital asset reviews.
+- Utilized BERT-based models for aspect extraction and sentiment classification.
+- Integrated review insights into an investment platform recommendation engine.
+- Reported model metrics: 81.25% sentiment accuracy and 28.12% aspect accuracy.
+
+### 06. War Room SPM 2023
+- **Tech Stack:** Google Sheets · Looker Studio · AppSheet
+- Supported state education data administration for Jabatan Pendidikan Negeri Sembilan (Unit TMK).
+- Developed interactive data visualisations and reporting components (2017–2022 trends).
+- Provided strategic performance analytics for education planners.
+
+---
+
+## 🛠️ Technical Skills
+
+- **Programming:** PHP, JavaScript, Python, Bash
+- **Frontend:** HTML5, CSS3, JavaScript, Tailwind CSS
+- **Backend:** Laravel, Flask, REST APIs
+- **Database:** MySQL, Google Sheets
+- **Cloud:** AWS (EC2, S3, IAM, VPC, Route 53, CloudFront, RDS, Lambda)
+- **DevOps:** Git, GitHub Actions, CI/CD
+- **Containers:** Docker, Docker Compose, Kubernetes *(learning)*
+- **Operating Systems:** Linux, Ubuntu Server, Windows
+- **Web Server:** Nginx, Apache
+- **Tools:** VS Code, Git, GitHub, Postman, cPanel
+- **AI / Machine Learning:** PyTorch, BERT, FinBERT, ABSA
+
+---
+
+## 📜 Certifications & Learning
+
+- **Google Cloud Digital Leader** — Preparation Completed
+- **AWS Certified Cloud Practitioner (CLF-C02)** — Preparation / Learning
+- **AWS re/Start – CloudIgnite / Forward College** — Ongoing Programme
+- **GitHub Certifications (Foundations & Actions)** — In Progress
+- **Top Coder Seminar & Competition UiTM 2023** — Competition / Certification
+
+---
+
+## 📬 Contact
+- **Email:** [irsyad.iffwat@gmail.com](mailto:irsyad.iffwat@gmail.com)
+- **GitHub:** [github.com/Iffwat](https://github.com/Iffwat)
+- **LinkedIn:** [linkedin.com/in/irsyad-iffwat](https://linkedin.com/in/irsyad-iffwat)
+- **Location:** Cyberjaya, Malaysia
